@@ -3,17 +3,21 @@
     <HeaderPage />
 
     <MainPage />
+
+    <ItemsWrapper />
   </div>
 </template>
 
 <script>
 import HeaderPage from '@/components/HeaderPage.vue';
 import MainPage from '@/components/MainPage.vue';
+import ItemsWrapper from '@/components/ItemsWrapper.vue';
 
 export default {
   components: {
     HeaderPage,
     MainPage,
+    ItemsWrapper,
   },
 };
 </script>
