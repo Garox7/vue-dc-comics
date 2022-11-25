@@ -5,6 +5,8 @@
     <MainPage />
 
     <ItemsWrapper />
+
+    <FooterPage />
   </div>
 </template>
 
@@ -12,12 +14,14 @@
 import HeaderPage from '@/components/HeaderPage.vue';
 import MainPage from '@/components/MainPage.vue';
 import ItemsWrapper from '@/components/ItemsWrapper.vue';
+import FooterPage from '@/components/FooterPage.vue';
 
 export default {
   components: {
     HeaderPage,
     MainPage,
     ItemsWrapper,
+    FooterPage,
   },
 };
 </script>
