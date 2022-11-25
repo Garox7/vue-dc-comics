@@ -106,9 +106,9 @@ $footer-width-size: 900px;
 
       h3 {
         color: white;
-        font-size: 16px;
+        font-size: 18px;
         text-transform: uppercase;
-        margin-bottom: .7rem;
+        margin-bottom: .5rem;
       }
 
       li {
