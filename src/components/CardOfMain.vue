@@ -1,12 +1,13 @@
 <template>
-  <div> <!-- class="card" in MainPage -->
+  <div>
     <div class="cover__img">
       <img
-        :src="card.thumb"
-        :alt="card.series"
+        :src="cover.thumb"
+        :alt="cover.series"
       >
     </div>
-    <p>{{ card.type }}</p>
+
+    <p class="title">{{ cover.series }}</p>
   </div>
 </template>
 
@@ -14,7 +15,7 @@
 export default {
   name: 'CardOfMain',
   props: {
-    card: Object,
+    cover: Object,
   },
 };
 </script>
@@ -30,10 +31,10 @@ export default {
     object-position: top;
     object-fit: cover;
   }
-
-  p {
-    text-transform: uppercase;
-  }
 }
 
+.title {
+  font-size: 14px;
+  text-transform: uppercase;
+}
 </style>

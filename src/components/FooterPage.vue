@@ -75,7 +75,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$footer-width-size: 900px;
+$footer-width-size: 1025px;
 
 .footer__top {
   background-image: url(@/img/footer-bg.jpg);
@@ -129,8 +129,8 @@ $footer-width-size: 900px;
   }
 
   .footer__logo img {
-    height: 450px;
-    width: 450px;
+    max-height: 450px;
+    max-width: 450px;
   }
 }
 
@@ -143,7 +143,7 @@ $footer-width-size: 900px;
 
 .footer__bottom__container {
   flex: 1 1 auto;
-  max-width: 900px;
+  max-width: 1025px;
   height: 80px;
   display: flex;
   justify-content: space-between;

@@ -1,15 +1,16 @@
 <template>
   <main>
     <div class="hero__bg"></div>
-    <div class="cover__container">
-      <div class="cover__title">CURRENT SERIES</div>
+    <div class="cards__container">
+      <div class="card__title">CURRENT SERIES</div>
       <CardOfMain
-        v-for="cover in dcCover"
-        :key="cover.series"
-        :card="cover"
+        v-for="card in dcCards"
+        :key="card.series"
+        :cover="card"
         class="card"
       />
     </div>
+    <button>LOAD MORE</button>
   </main>
 </template>
 
@@ -23,7 +24,7 @@ export default {
   },
   data() {
     return {
-      dcCover: [
+      dcCards: [
         {
           thumb: 'https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX',
           price: '$19.99',
@@ -105,8 +106,10 @@ export default {
 <style lang="scss" scoped>
 main {
   background-color: #212529;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -118,18 +121,18 @@ main {
   height: 400px;
 }
 
-.cover__container {
+.cards__container {
   color: white;
   flex: 1 1 auto;
-  max-width: 900px;
-  padding: 2.5rem 1rem;
+  max-width: 1025px;
+  padding: 2.5rem 1rem 2rem 1rem;
   display: flex;
   flex-wrap: wrap;
   column-gap: .5rem;
   row-gap: 1.2rem;
   position: relative;
 
-  .cover__title {
+  .card__title {
     background-color: #3880f1;
     font-weight: bold;
     padding: 10px;
@@ -138,15 +141,35 @@ main {
   }
 
   .card {
-    flex: 1 1 15%;
-    min-width: 100px;
+    flex: 1 1 calc(100% / 6 - .5rem * 4);
+    min-width: 150px;
     padding: .5rem;
     transition: all .15s ease-in-out;
-    cursor: pointer;
 
     &:hover {
-      background-color: #3f444985;
+    background-color: #3f444985;
     }
+  }
+}
+
+button {
+  color: white;
+  background-color: #3880f1;
+  font-weight: bold;
+  width: 150px;
+  height: 40px;
+  border: 1px solid #3880f1;
+  transition: all .15s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 980px){
+  .cards__container .card {
+    flex: 1 1 calc(100% / 4 - .5rem * 3);
   }
 }
 </style>

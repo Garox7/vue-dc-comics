@@ -35,14 +35,11 @@ export default {
 section {
   background-color: rgb(56, 128, 241);
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .items__container {
-  flex: 1 1 auto;
-  max-width: 900px;
+  max-width: 1025px;
+  margin: 0 auto;
   padding: 3rem 0;
   display: flex;
   align-items: center;

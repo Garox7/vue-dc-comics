@@ -70,7 +70,6 @@ $header-heigth: 80px;
 $link-color: #0d6efd;
 
 header {
-  flex: 1 1 auto;
   height: $header-heigth;
   width: 100%;
   display: flex;
@@ -79,14 +78,15 @@ header {
 
   .header__container {
     flex: 1 1 auto;
-    max-width: 900px;
+    max-width: 1025px;
+    padding: 0 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     img {
-      width: 65px;
-      height: 65px;
+      width: 55px;
+      height: 55px;
     }
 
     nav {
@@ -96,6 +96,7 @@ header {
         list-style: none;
         display: flex;
         align-items: center;
+        flex-wrap: wrap;
         gap: 1.2rem;
         height: 100%;
 
