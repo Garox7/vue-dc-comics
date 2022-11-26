@@ -83,6 +83,7 @@ $footer-width-size: 1025px;
   background-size: cover;
   width: 100%;
   height: 350px;
+  padding: 0 1rem;
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -144,7 +145,7 @@ $footer-width-size: 1025px;
 .footer__bottom__container {
   flex: 1 1 auto;
   max-width: 1025px;
-  height: 80px;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -187,6 +188,23 @@ $footer-width-size: 1025px;
       }
     }
 
+  }
+}
+
+@media screen and (max-width: 768px){
+  .footer__top__container {
+   justify-content: center;
+    .footer__logo {
+    display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer__bottom__container {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
   }
 }
 </style>

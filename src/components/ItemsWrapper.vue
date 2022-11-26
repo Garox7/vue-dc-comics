@@ -40,10 +40,11 @@ section {
 .items__container {
   max-width: 1025px;
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 3rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 
   .item {
     display: flex;
@@ -64,6 +65,37 @@ section {
       font-size: 14px;
       font-weight: 400;
       text-transform: uppercase;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .items__container {
+    justify-content: center;
+    gap: 2rem;
+
+    .item {
+      flex: 1 1 calc(100% / 3 - 4rem);
+      max-width: 220px;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .items__container {
+    flex-direction: column;
+    gap: 2rem;
+
+    .item {
+      flex: 1 1 calc(100% / 3 - 4rem);
+
+      img {
+        height: 60px;
+      }
+
+      h4 {
+        font-size: 20px;
+      }
     }
   }
 }
